@@ -30,7 +30,7 @@ int is_palindrome_helper(char *s, int position, int string_len)
 	if (s[position] != s[string_len - 1])
 		return (0);
 
-	return (is_palindrome_helper(s, position + 1, string_len - 2));
+	return (is_palindrome_helper(s, position + 1, string_len - 1));
 }
 
 /**
