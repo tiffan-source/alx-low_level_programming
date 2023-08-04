@@ -8,7 +8,7 @@
 
 int string_len(char *s)
 {
-	if (s == NULL && *s == '\0')
+	if (s == NULL || *s == '\0')
 		return (0);
 
 	return (1 + string_len(s + 1));
@@ -30,7 +30,7 @@ int is_palindrome_helper(char *s, int position, int string_len)
 	if (s[position] != s[string_len - 1])
 		return (0);
 
-	return (is_palindrome_helper(s, position + 1, string_len - 1));
+	return (is_palindrome_helper(s, position + 1, string_len - 2));
 }
 
 /**
