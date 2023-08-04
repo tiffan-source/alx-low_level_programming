@@ -24,7 +24,7 @@ int string_len(char *s)
 
 int is_palindrome_helper(char *s, int position, int string_len)
 {
-	if (position >= string_len)
+	if (position > string_len)
 		return (1);
 
 	if (s[position] != s[string_len - 1])
